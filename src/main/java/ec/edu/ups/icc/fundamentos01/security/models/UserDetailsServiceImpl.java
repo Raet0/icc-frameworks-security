@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import ec.edu.ups.icc.fundamentos01.users.models.UserEntity;
 import ec.edu.ups.icc.fundamentos01.users.repository.UserRepository;
 
 /**
@@ -68,7 +69,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
          * - Factory method que convierte nuestro UserEntity
          * - Extrae roles y los convierte a authorities
          * - Retorna objeto compatible con Spring Security
-         * 
          */
         return UserDetailsImpl.build(user);
     }

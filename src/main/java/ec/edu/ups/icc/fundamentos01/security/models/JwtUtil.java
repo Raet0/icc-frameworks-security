@@ -1,26 +1,24 @@
 package ec.edu.ups.icc.fundamentos01.security.models;
 
-import java.sql.Date;
-import java.util.stream.Collectors;
 
-import javax.crypto.SecretKey;
+// imports packages y clases....
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
-import org.hibernate.validator.internal.util.logging.LoggerFactory;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import ch.qos.logback.classic.Logger;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.MalformedJwtException;
-import io.jsonwebtoken.SignatureException;
-import io.jsonwebtoken.UnsupportedJwtException;
-import io.jsonwebtoken.security.Keys;
+import javax.crypto.SecretKey;
+import java.util.Date;
+import java.util.stream.Collectors;
 
 @Component
 public class JwtUtil {
+
     private static final Logger logger = LoggerFactory.getLogger(JwtUtil.class);
 
     private final JwtProperties jwtProperties;
@@ -235,5 +233,4 @@ public class JwtUtil {
         // Si cayó en cualquier catch, el token es INVÁLIDO
         return false;
     }
-    
 }
