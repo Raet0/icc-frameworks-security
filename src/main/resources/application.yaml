@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: fundamentos01
+  datasource:
+    url: jdbc:postgresql://localhost:5432/devdb
+    username: ups
+    password: ups123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # Tip: En Spring Boot 3 no suele ser necesario especificar el dialecto manualmente,
+        # pero dejarlo no hace daño.
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# === AGREGA ESTO PARA VER LOS PARÁMETROS (?, ?) ===
+logging:
+  level:
+    org:
+      hibernate:
+        # Esto te permitirá ver los valores que se inyectan en el LIMIT y OFFSET
+        orm:
+          jdbc:
+            bind: trace
+
+server:
+  port: 8080
+
+
+# ============== CONFIGURACIÓN DE JWT ==============
+jwt:
+    # Secret key para firmar tokens (EN PRODUCCIÓN USAR VARIABLE DE ENTORNO)
+    secret: ${JWT_SECRET:mySecretKeyForJWT2024MustBeAtLeast256BitsLongForHS256Algorithm}
+    
+    # Tiempo de expiración del access token (30 minutos)
+    expiration: 1800000  # 30 minutos en milisegundos
+    
+    # Tiempo de expiración del refresh token (7 días)
+    refresh-expiration: 604800000  # 7 días en milisegundos
+    
+    # Issuer del token
+    issuer: fundamentos01-api
+    
+    # Header donde se envía el token
+    header: Authorization
+    
+    # Prefijo del token
+    prefix: "Bearer "
