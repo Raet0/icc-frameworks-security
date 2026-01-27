@@ -23,16 +23,16 @@
 
 ## **1. Registro de Usuario (POST /auth/register)**
 
-![Registro de usuario](assets/capture11.2.png)
+![Registro de usuario](capturas/capturas2/capture11.2.png)
 
 ---
 
 ## **2. Login de Usuario (POST /auth/login)**
 
-![Login de usuario](assets/capture11.1.png)
+![Login de usuario](capturas/capturas2/capture11.1.png.png)
 
 ---
 
 ## **3. Listar Usuarios (GET /api/users)**
 
-![Listar usuarios sin token](assets/capture11.3.png)
+![Listar usuarios sin token](capturas/capturas2/capture11.3.png.png)
