@@ -29,10 +29,10 @@
 
 ## **2. Login de Usuario (POST /auth/login)**
 
-![Login de usuario](capturas/capturas2/capture11.1.png.png)
+![Login de usuario](capturas/capturas2/capture11.1.png)
 
 ---
 
 ## **3. Listar Usuarios (GET /api/users)**
 
-![Listar usuarios sin token](capturas/capturas2/capture11.3.png.png)
+![Listar usuarios sin token](capturas/capturas2/capture11.3.png)
