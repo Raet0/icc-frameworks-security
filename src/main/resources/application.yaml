@@ -2,9 +2,15 @@ spring:
   application:
     name: fundamentos01
   datasource:
+<<<<<<< HEAD
     url: jdbc:postgresql://localhost:5432/devdb
     username: ups
     password: ups123
+=======
+    url: jdbc:postgresql://localhost:5433/postdb
+    username: rafael
+    password: 162003
+>>>>>>> 3d55850 (12 y 13 correctos)
   jpa:
     hibernate:
       ddl-auto: update
@@ -12,6 +18,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+<<<<<<< HEAD
         # Tip: En Spring Boot 3 no suele ser necesario especificar el dialecto manualmente,
         # pero dejarlo no hace daño.
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -30,6 +37,9 @@ server:
   port: 8080
 
 
+=======
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+>>>>>>> 3d55850 (12 y 13 correctos)
 # ============== CONFIGURACIÓN DE JWT ==============
 jwt:
     # Secret key para firmar tokens (EN PRODUCCIÓN USAR VARIABLE DE ENTORNO)
